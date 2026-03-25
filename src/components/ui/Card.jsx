@@ -16,7 +16,7 @@ import { forwardRef } from "react";
 const Card = forwardRef(
   (
     { children, variant = "default", hover = false, className, ...props },
-    ref
+    ref,
   ) => {
     const baseStyles =
       "rounded-2xl overflow-hidden transition-all duration-300";
@@ -42,7 +42,7 @@ const Card = forwardRef(
         {children}
       </div>
     );
-  }
+  },
 );
 
 Card.displayName = "Card";

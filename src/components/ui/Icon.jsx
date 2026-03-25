@@ -53,7 +53,7 @@ const Icon = ({
         className={cn(
           "inline-flex items-center justify-center",
           sizes[size],
-          className
+          className,
         )}
         aria-label={label}
         aria-hidden={!label}

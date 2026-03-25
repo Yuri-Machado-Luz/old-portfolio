@@ -232,16 +232,28 @@ const Contact = () => {
                       <option value="" disabled className="text-main-gray">
                         Selecione um assunto
                       </option>
-                      <option value="Projeto de Desenvolvimento" className="text-main-black">
+                      <option
+                        value="Projeto de Desenvolvimento"
+                        className="text-main-black"
+                      >
                         Projeto de Desenvolvimento
                       </option>
-                      <option value="Automação / Integração" className="text-main-black">
+                      <option
+                        value="Automação / Integração"
+                        className="text-main-black"
+                      >
                         Automação / Integração
                       </option>
-                      <option value="Consultoria Técnica" className="text-main-black">
+                      <option
+                        value="Consultoria Técnica"
+                        className="text-main-black"
+                      >
                         Consultoria Técnica
                       </option>
-                      <option value="Oportunidade de Trabalho" className="text-main-black">
+                      <option
+                        value="Oportunidade de Trabalho"
+                        className="text-main-black"
+                      >
                         Oportunidade de Trabalho
                       </option>
                       <option value="Outro" className="text-main-black">

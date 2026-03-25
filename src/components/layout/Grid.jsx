@@ -53,7 +53,7 @@ const Grid = ({
         "grid",
         colClasses[cols] || colClasses[1],
         gaps[gap],
-        className
+        className,
       )}
       {...props}
     >

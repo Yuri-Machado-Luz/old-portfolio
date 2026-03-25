@@ -47,7 +47,7 @@ const Badge = ({
         variants[variant],
         sizes[size],
         animatedStyles,
-        className
+        className,
       )}
       {...props}
     >

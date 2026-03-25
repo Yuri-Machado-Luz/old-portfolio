@@ -23,7 +23,7 @@ describe("cn (className utility)", () => {
     const isDisabled = false;
 
     expect(cn("base", isActive && "active", isDisabled && "disabled")).toBe(
-      "base active"
+      "base active",
     );
   });
 

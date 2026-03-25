@@ -21,7 +21,7 @@ describe("useDebounce", () => {
   it("debounces value changes", () => {
     const { result, rerender } = renderHook(
       ({ value }) => useDebounce(value, 500),
-      { initialProps: { value: "initial" } }
+      { initialProps: { value: "initial" } },
     );
 
     // Update value
@@ -42,7 +42,7 @@ describe("useDebounce", () => {
   it("cancels previous timeout on rapid changes", () => {
     const { result, rerender } = renderHook(
       ({ value }) => useDebounce(value, 500),
-      { initialProps: { value: "first" } }
+      { initialProps: { value: "first" } },
     );
 
     rerender({ value: "second" });

@@ -171,9 +171,7 @@ const Footer = () => {
               <p className="text-main-white/50 text-center text-sm sm:text-left">
                 © {currentYear} Yuri Machado Luz. Todos os direitos reservados.
               </p>
-              <p
-                className="text-main-white/50 text-center text-sm sm:text-right"
-              >
+              <p className="text-main-white/50 text-center text-sm sm:text-right">
                 Desenvolvido com{" "}
                 <span className="text-pri inline-block animate-pulse">♥</span>{" "}
                 em São Paulo, Brasil

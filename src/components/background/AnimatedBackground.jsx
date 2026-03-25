@@ -54,7 +54,7 @@ const AnimatedBackground = () => {
         0,
         centerX,
         centerY,
-        Math.max(canvas.width, canvas.height)
+        Math.max(canvas.width, canvas.height),
       );
       baseGradient.addColorStop(0, "rgba(12, 9, 13, 1)");
       baseGradient.addColorStop(1, "rgba(12, 9, 13, 1)");
@@ -71,7 +71,7 @@ const AnimatedBackground = () => {
         0,
         blob1X,
         blob1Y,
-        400
+        400,
       );
       blob1Gradient.addColorStop(0, "rgba(255, 0, 64, 0.15)");
       blob1Gradient.addColorStop(0.5, "rgba(255, 0, 64, 0.05)");
@@ -89,7 +89,7 @@ const AnimatedBackground = () => {
         0,
         blob2X,
         blob2Y,
-        350
+        350,
       );
       blob2Gradient.addColorStop(0, "rgba(0, 255, 255, 0.12)");
       blob2Gradient.addColorStop(0.5, "rgba(0, 255, 255, 0.04)");
@@ -107,7 +107,7 @@ const AnimatedBackground = () => {
         0,
         blob3X,
         blob3Y,
-        500
+        500,
       );
       blob3Gradient.addColorStop(0, "rgba(204, 0, 51, 0.1)");
       blob3Gradient.addColorStop(0.6, "rgba(204, 0, 51, 0.03)");

@@ -18,7 +18,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
       handleActiveLink(link);
       setIsMenuOpen(false);
     },
-    [handleActiveLink]
+    [handleActiveLink],
   );
 
   const getLinkStyles = (isActive) =>
@@ -27,7 +27,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
       "text-base font-bold 2xl:text-xl",
       isActive
         ? "text-hex-pri active-link hover:drop-shadow-md hover:drop-shadow-white/10"
-        : "text-hex-main-white hover:drop-shadow-md hover:drop-shadow-pri-light/60"
+        : "text-hex-main-white hover:drop-shadow-md hover:drop-shadow-pri-light/60",
     );
 
   return (
@@ -106,7 +106,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
                   transition-colors duration-200`,
                   isActive
                     ? "text-pri"
-                    : "text-main-white/80 hover:text-main-white"
+                    : "text-main-white/80 hover:text-main-white",
                 )}
                 onClick={() => handleActiveLink(item.link)}
               >

@@ -12,7 +12,7 @@ import { forwardRef } from "react";
 const Section = forwardRef(
   (
     { children, id, as = "section", spacing = "default", className, ...props },
-    ref
+    ref,
   ) => {
     const spacings = {
       none: "py-0",
@@ -32,14 +32,14 @@ const Section = forwardRef(
           `container mx-auto flex min-w-full flex-col items-center
           justify-center`,
           spacings[spacing],
-          className
+          className,
         )}
         {...props}
       >
         {children}
       </Tag>
     );
-  }
+  },
 );
 
 Section.displayName = "Section";

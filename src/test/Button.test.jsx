@@ -61,7 +61,7 @@ describe("Button Component", () => {
     render(
       <Button onClick={handleClick} disabled>
         Disabled
-      </Button>
+      </Button>,
     );
     await user.click(screen.getByRole("button"));
 
@@ -80,7 +80,7 @@ describe("Button Component", () => {
         rightIcon={<span data-testid="right-icon">→</span>}
       >
         With Icons
-      </Button>
+      </Button>,
     );
 
     expect(screen.getByTestId("left-icon")).toBeInTheDocument();
