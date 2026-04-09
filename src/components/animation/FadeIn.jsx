@@ -1,5 +1,5 @@
-import { cn } from "@utils/cn";
-import { motion as Motion } from "motion/react";
+import { cn } from '@utils/cn';
+import { motion as Motion } from 'motion/react';
 
 /**
  * FadeIn Component
@@ -11,14 +11,7 @@ import { motion as Motion } from "motion/react";
  *   <p>This fades in</p>
  * </FadeIn>
  */
-const FadeIn = ({
-  children,
-  delay = 0,
-  duration = 0.5,
-  direction = "up",
-  className,
-  ...props
-}) => {
+const FadeIn = ({ children, delay = 0, duration = 0.5, direction = 'up', className, ...props }) => {
   const directions = {
     up: { y: 20 },
     down: { y: -20 },
@@ -35,7 +28,7 @@ const FadeIn = ({
       transition={{
         duration,
         delay,
-        ease: "easeOut",
+        ease: 'easeOut',
       }}
       className={cn(className)}
       {...props}

@@ -1,4 +1,4 @@
-import { cn } from "@utils/cn";
+import { cn } from '@utils/cn';
 
 /**
  * Spinner Component
@@ -9,25 +9,25 @@ import { cn } from "@utils/cn";
  * <Spinner />
  * <Spinner size="lg" color="primary" />
  */
-const Spinner = ({ size = "md", color = "current", className, ...props }) => {
+const Spinner = ({ size = 'md', color = 'current', className, ...props }) => {
   const sizes = {
-    xs: "w-3 h-3",
-    sm: "w-4 h-4",
-    md: "w-6 h-6",
-    lg: "w-8 h-8",
-    xl: "w-12 h-12",
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12',
   };
 
   const colors = {
-    current: "text-current",
-    primary: "text-pri",
-    secondary: "text-sec",
-    white: "text-white",
+    current: 'text-current',
+    primary: 'text-pri',
+    secondary: 'text-sec',
+    white: 'text-white',
   };
 
   return (
     <svg
-      className={cn("animate-spin", sizes[size], colors[color], className)}
+      className={cn('animate-spin', sizes[size], colors[color], className)}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -35,14 +35,7 @@ const Spinner = ({ size = "md", color = "current", className, ...props }) => {
       aria-label="Loading"
       {...props}
     >
-      <circle
-        className="opacity-25"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="currentColor"
-        strokeWidth="4"
-      />
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
       <path
         className="opacity-75"
         fill="currentColor"

@@ -2,8 +2,8 @@
 
 const carouselContent = [
   {
-    language: "javascript",
-    title: "FullStack Developer",
+    language: 'javascript',
+    title: 'FullStack Developer',
     code: `// Perfil FullStack com Visão End-to-End
 class FullStackDeveloper {
   constructor() {
@@ -23,11 +23,11 @@ class FullStackDeveloper {
 }
 
 // Stack: React | Node.js | Python | APIs REST | Design System`,
-    metrics: ["React", "Node.js", "Python", "APIs"],
+    metrics: ['React', 'Node.js', 'Python', 'APIs'],
   },
   {
-    language: "javascript",
-    title: "Stack Balanceada FullStack",
+    language: 'javascript',
+    title: 'Stack Balanceada FullStack',
     code: `const fullStackBalanceado = {
   frontend: {
     core: ["React", "JSX", "Vite", "Styled Components"],
@@ -52,11 +52,11 @@ class FullStackDeveloper {
 };
 
 // Especialista em: Arquitetura FullStack | APIs | Data Flow`,
-    metrics: ["React + Node", "Python + APIs", "Data Pipeline"],
+    metrics: ['React + Node', 'Python + APIs', 'Data Pipeline'],
   },
   {
-    language: "javascript",
-    title: "Dashboard SaaS - FullStack",
+    language: 'javascript',
+    title: 'Dashboard SaaS - FullStack',
     code: `// Projeto Real: Plataforma Analytics FullStack
 const DashboardFullStack = {
   arquitetura: "Front-end React + Back-end Node.js + APIs Externas",
@@ -94,11 +94,11 @@ const DashboardFullStack = {
     confiabilidade: "99.8% uptime"
   }
 };`,
-    metrics: ["React + Node.js", "APIs Externas", "99.8% uptime"],
+    metrics: ['React + Node.js', 'APIs Externas', '99.8% uptime'],
   },
   {
-    language: "python",
-    title: "Back-end & Data Pipeline",
+    language: 'python',
+    title: 'Back-end & Data Pipeline',
     code: `# Data Pipeline & API Development
 class DataPipeline:
     def __init__(self):
@@ -131,11 +131,11 @@ class DataPipeline:
         }
 
 # Python + Node.js + APIs + Databases`,
-    metrics: ["Python + Node", "ETL Pipeline", "↓ 57% tempo"],
+    metrics: ['Python + Node', 'ETL Pipeline', '↓ 57% tempo'],
   },
   {
-    language: "javascript",
-    title: "Arquitetura de APIs & Integrações",
+    language: 'javascript',
+    title: 'Arquitetura de APIs & Integrações',
     code: `// API Architecture & Microservices
 const APIIntegrationLayer = {
   design: "Arquitetura REST + Middleware Pattern",
@@ -176,11 +176,11 @@ const APIIntegrationLayer = {
     monitoring: ["New Relic", "Sentry", "Custom Dashboards"]
   }
 };`,
-    metrics: ["API Architecture", "< 200ms", "99.8% SLA"],
+    metrics: ['API Architecture', '< 200ms', '99.8% SLA'],
   },
   {
-    language: "javascript",
-    title: "Resultados & Impacto FullStack",
+    language: 'javascript',
+    title: 'Resultados & Impacto FullStack',
     code: `// Métricas de Impacto FullStack
 const resultadosMensuraveis = {
   projetoIBM: {
@@ -211,7 +211,7 @@ const resultadosMensuraveis = {
 };
 
 // FullStack com Resultados Mensuráveis`,
-    metrics: ["-57% tempo", "95+ Performance", "12+ APIs"],
+    metrics: ['-57% tempo', '95+ Performance', '12+ APIs'],
   },
 ];
 

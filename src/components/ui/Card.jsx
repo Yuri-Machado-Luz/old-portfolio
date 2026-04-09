@@ -1,5 +1,5 @@
-import { cn } from "@utils/cn";
-import { forwardRef } from "react";
+import { cn } from '@utils/cn';
+import { forwardRef } from 'react';
 
 /**
  * Card Component
@@ -14,24 +14,20 @@ import { forwardRef } from "react";
  * </Card>
  */
 const Card = forwardRef(
-  (
-    { children, variant = "default", hover = false, className, ...props },
-    ref,
-  ) => {
-    const baseStyles =
-      "rounded-2xl overflow-hidden transition-all duration-300";
+  ({ children, variant = 'default', hover = false, className, ...props }, ref) => {
+    const baseStyles = 'rounded-2xl overflow-hidden transition-all duration-300';
 
     const variants = {
-      default: "bg-main-gray/60 border border-main-gray/30",
-      elevated: "bg-main-gray/80 shadow-lg shadow-black/30",
-      outline: "border-2 border-pri/30 bg-transparent",
-      outlineBold: "border-2 border-pri/60 bg-transparent",
-      glass: "bg-main-gray/30 backdrop-blur-md border border-white/10",
+      default: 'bg-main-gray/60 border border-main-gray/30',
+      elevated: 'bg-main-gray/80 shadow-lg shadow-black/30',
+      outline: 'border-2 border-pri/30 bg-transparent',
+      outlineBold: 'border-2 border-pri/60 bg-transparent',
+      glass: 'bg-main-gray/30 backdrop-blur-md border border-white/10',
     };
 
     const hoverStyles = hover
-      ? "hover:scale-[1.02] hover:shadow-xl hover:shadow-pri/10 cursor-pointer"
-      : "";
+      ? 'hover:scale-[1.02] hover:shadow-xl hover:shadow-pri/10 cursor-pointer'
+      : '';
 
     return (
       <div
@@ -45,29 +41,23 @@ const Card = forwardRef(
   },
 );
 
-Card.displayName = "Card";
+Card.displayName = 'Card';
 
 // Card subcomponents
 const CardHeader = ({ children, className, ...props }) => (
-  <div
-    className={cn("border-main-gray/30 border-b px-6 py-4", className)}
-    {...props}
-  >
+  <div className={cn('border-main-gray/30 border-b px-6 py-4', className)} {...props}>
     {children}
   </div>
 );
 
 const CardBody = ({ children, className, ...props }) => (
-  <div className={cn("px-6 py-4", className)} {...props}>
+  <div className={cn('px-6 py-4', className)} {...props}>
     {children}
   </div>
 );
 
 const CardFooter = ({ children, className, ...props }) => (
-  <div
-    className={cn("border-main-gray/30 border-t px-6 py-4", className)}
-    {...props}
-  >
+  <div className={cn('border-main-gray/30 border-t px-6 py-4', className)} {...props}>
     {children}
   </div>
 );

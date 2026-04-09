@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Josefin Sans", sans-serif;
-  --font-logo: "Changa", sans-serif;
-  --font-accent: "Tenor Sans", sans-serif;
+  --font-sans: 'Josefin Sans', sans-serif;
+  --font-logo: 'Changa', sans-serif;
+  --font-accent: 'Tenor Sans', sans-serif;
 
   --color-pri: oklch(63.212% 0.25419 20.836);
   --color-pri-light: oklab(65.644% 0.2286 0.05413);

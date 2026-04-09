@@ -1,10 +1,10 @@
-import { Icon } from "@components/ui";
-import { NAV_ITEMS } from "@constants/routes";
-import { cn } from "@utils/cn";
-import { AnimatePresence, motion as Motion } from "motion/react";
-import { Menu, X } from "lucide-react";
-import { useCallback, useState } from "react";
-import { itemVariants, menuVariants } from "./const.env.js";
+import { Icon } from '@components/ui';
+import { NAV_ITEMS } from '@constants/routes';
+import { cn } from '@utils/cn';
+import { AnimatePresence, motion as Motion } from 'motion/react';
+import { Menu, X } from 'lucide-react';
+import { useCallback, useState } from 'react';
+import { itemVariants, menuVariants } from './const.env.js';
 
 function NavMenu({ activeLink, handleActiveLink }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,11 +23,11 @@ function NavMenu({ activeLink, handleActiveLink }) {
 
   const getLinkStyles = (isActive) =>
     cn(
-      "block w-full self-center px-2 py-3 transition-colors duration-300",
-      "text-base font-bold 2xl:text-xl",
+      'block w-full self-center px-2 py-3 transition-colors duration-300',
+      'text-base font-bold 2xl:text-xl',
       isActive
-        ? "text-hex-pri active-link hover:drop-shadow-md hover:drop-shadow-white/10"
-        : "text-hex-main-white hover:drop-shadow-md hover:drop-shadow-pri-light/60",
+        ? 'text-hex-pri active-link hover:drop-shadow-md hover:drop-shadow-white/10'
+        : 'text-hex-main-white hover:drop-shadow-md hover:drop-shadow-pri-light/60',
     );
 
   return (
@@ -43,8 +43,8 @@ function NavMenu({ activeLink, handleActiveLink }) {
           className="xl:hidden"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isMenuOpen}
         >
           <Icon icon={isMenuOpen ? X : Menu} size="lg" />
@@ -70,7 +70,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, translateY: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 40 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 40 }}
                   className="mb-2 flex h-16 w-full justify-center rounded-2xl
                     bg-black/20 text-center"
                   role="menuitem"
@@ -104,9 +104,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
                 className={cn(
                   `relative block px-3 py-2 text-lg font-medium tracking-wide
                   transition-colors duration-200`,
-                  isActive
-                    ? "text-pri"
-                    : "text-main-white/80 hover:text-main-white",
+                  isActive ? 'text-pri' : 'text-main-white/80 hover:text-main-white',
                 )}
                 onClick={() => handleActiveLink(item.link)}
               >
@@ -118,7 +116,7 @@ function NavMenu({ activeLink, handleActiveLink }) {
                     className="bg-pri -bottom-0.2 absolute right-0 left-0 h-0.5"
                     layoutId="navIndicator"
                     transition={{
-                      type: "spring",
+                      type: 'spring',
                       stiffness: 380,
                       damping: 30,
                     }}

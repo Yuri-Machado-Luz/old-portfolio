@@ -3,10 +3,10 @@
  *
  * Configuration for Vitest + React Testing Library
  */
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
 // Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: (query) => ({
     matches: false,
@@ -41,7 +41,7 @@ const localStorageMock = (() => {
   };
 })();
 
-Object.defineProperty(window, "localStorage", {
+Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
 });
 
@@ -52,7 +52,7 @@ class IntersectionObserver {
   disconnect() {}
 }
 
-Object.defineProperty(window, "IntersectionObserver", {
+Object.defineProperty(window, 'IntersectionObserver', {
   writable: true,
   value: IntersectionObserver,
 });
@@ -64,7 +64,7 @@ class ResizeObserver {
   disconnect() {}
 }
 
-Object.defineProperty(window, "ResizeObserver", {
+Object.defineProperty(window, 'ResizeObserver', {
   writable: true,
   value: ResizeObserver,
 });

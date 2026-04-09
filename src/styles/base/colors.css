@@ -9,7 +9,7 @@
    ----------------------------------------------- */
 
 :root,
-[data-theme="dark"] {
+[data-theme='dark'] {
   /* Neutral */
   --neutral-50: #ffffffff;
   --neutral-100: #ffffffff;
@@ -165,7 +165,7 @@
    Primitivas — Light
    ----------------------------------------------- */
 
-[data-theme="light"] {
+[data-theme='light'] {
   /* --- Tokens Semanticos (Light) --- */
   --color-bg: var(--neutral-100);
   --color-surface: var(--neutral-50);
@@ -202,7 +202,7 @@
    ----------------------------------------------- */
 
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
+  :root:not([data-theme='dark']) {
     --color-bg: var(--neutral-100);
     --color-surface: var(--neutral-50);
     --color-surface-raised: var(--neutral-200);

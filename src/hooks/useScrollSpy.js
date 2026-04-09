@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /**
  * Hook para detectar qual seção está visível no viewport
@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
  * @returns {string} - ID da seção ativa atual
  */
 export const useScrollSpy = (sectionIds, offset = 100) => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +29,7 @@ export const useScrollSpy = (sectionIds, offset = 100) => {
 
             // Atualiza o hash da URL sem scroll
             if (window.location.hash !== `#${sectionIds[i]}`) {
-              window.history.replaceState(null, "", `#${sectionIds[i]}`);
+              window.history.replaceState(null, '', `#${sectionIds[i]}`);
             }
 
             break;
@@ -39,9 +39,9 @@ export const useScrollSpy = (sectionIds, offset = 100) => {
 
       // Se estamos no topo da página, remove o hash
       if (scrollPosition < offset) {
-        setActiveSection("");
+        setActiveSection('');
         if (window.location.hash) {
-          window.history.replaceState(null, "", window.location.pathname);
+          window.history.replaceState(null, '', window.location.pathname);
         }
       }
     };
@@ -61,10 +61,10 @@ export const useScrollSpy = (sectionIds, offset = 100) => {
       }
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
     };
   }, [sectionIds, offset]);
 

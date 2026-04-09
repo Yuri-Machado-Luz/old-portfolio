@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /**
  * useScrollPosition Hook
@@ -12,7 +12,7 @@ export function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = useState({
     scrollX: 0,
     scrollY: 0,
-    scrollDirection: "none",
+    scrollDirection: 'none',
   });
 
   useEffect(() => {
@@ -21,11 +21,7 @@ export function useScrollPosition() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const direction =
-        currentScrollY > lastScrollY
-          ? "down"
-          : currentScrollY < lastScrollY
-            ? "up"
-            : "none";
+        currentScrollY > lastScrollY ? 'down' : currentScrollY < lastScrollY ? 'up' : 'none';
 
       setScrollPosition({
         scrollX: window.scrollX,
@@ -36,8 +32,8 @@ export function useScrollPosition() {
       lastScrollY = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return scrollPosition;

@@ -2,8 +2,7 @@
   will-change: transform, box-shadow, opacity;
   backface-visibility: hidden;
   transform-origin: center center;
-  animation: badgeAnimate 4s infinite alternate-reverse
-    cubic-bezier(0, 0.19, 0.99, 0.02);
+  animation: badgeAnimate 4s infinite alternate-reverse cubic-bezier(0, 0.19, 0.99, 0.02);
 }
 
 @keyframes badgeAnimate {

@@ -13,7 +13,7 @@
  * @returns {string} Merged class string
  */
 export function cn(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default cn;

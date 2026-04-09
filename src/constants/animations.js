@@ -11,12 +11,12 @@ export const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      when: "beforeChildren",
+      when: 'beforeChildren',
     },
   },
   exit: {
     opacity: 0,
-    transition: { when: "afterChildren" },
+    transition: { when: 'afterChildren' },
   },
 };
 
@@ -63,7 +63,7 @@ export const popIn = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: "spring", stiffness: 300, damping: 20 },
+    transition: { type: 'spring', stiffness: 300, damping: 20 },
   },
   exit: { opacity: 0, scale: 0 },
 };
@@ -74,12 +74,12 @@ export const menuVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { staggerChildren: 0.1, when: "beforeChildren" },
+    transition: { staggerChildren: 0.1, when: 'beforeChildren' },
   },
   exit: {
     opacity: 0,
     y: -10,
-    transition: { when: "afterChildren" },
+    transition: { when: 'afterChildren' },
   },
 };
 
@@ -91,8 +91,8 @@ export const itemVariants = {
 
 // Spring presets
 export const SPRING = {
-  BOUNCY: { type: "spring", stiffness: 400, damping: 10 },
-  SMOOTH: { type: "spring", stiffness: 100, damping: 15 },
-  SNAPPY: { type: "spring", stiffness: 300, damping: 30 },
-  GENTLE: { type: "spring", stiffness: 50, damping: 20 },
+  BOUNCY: { type: 'spring', stiffness: 400, damping: 10 },
+  SMOOTH: { type: 'spring', stiffness: 100, damping: 15 },
+  SNAPPY: { type: 'spring', stiffness: 300, damping: 30 },
+  GENTLE: { type: 'spring', stiffness: 50, damping: 20 },
 };

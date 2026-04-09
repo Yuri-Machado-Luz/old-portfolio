@@ -23,9 +23,9 @@ export function validateEmail(email) {
  */
 export function validateRequired(value) {
   if (value === null || value === undefined) return false;
-  if (typeof value === "string") return value.trim().length > 0;
+  if (typeof value === 'string') return value.trim().length > 0;
   if (Array.isArray(value)) return value.length > 0;
-  if (typeof value === "object") return Object.keys(value).length > 0;
+  if (typeof value === 'object') return Object.keys(value).length > 0;
   return true;
 }
 
@@ -37,7 +37,7 @@ export function validateRequired(value) {
  * @returns {boolean} True if string meets minimum length
  */
 export function validateMinLength(value, min) {
-  return typeof value === "string" && value.length >= min;
+  return typeof value === 'string' && value.length >= min;
 }
 
 /**
@@ -48,7 +48,7 @@ export function validateMinLength(value, min) {
  * @returns {boolean} True if string is within maximum length
  */
 export function validateMaxLength(value, max) {
-  return typeof value === "string" && value.length <= max;
+  return typeof value === 'string' && value.length <= max;
 }
 
 /**
@@ -74,5 +74,5 @@ export function validateUrl(url) {
  */
 export function validatePhone(phone) {
   const phoneRegex = /^\(?[1-9]{2}\)?\s?(?:9\d{4}|\d{4})-?\d{4}$/;
-  return phoneRegex.test(phone.replace(/\s/g, ""));
+  return phoneRegex.test(phone.replace(/\s/g, ''));
 }

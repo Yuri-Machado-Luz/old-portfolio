@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "react";
+import { useSyncExternalStore } from 'react';
 
 /**
  * useMediaQuery Hook
@@ -13,8 +13,8 @@ import { useSyncExternalStore } from "react";
 export function useMediaQuery(query) {
   const subscribe = (callback) => {
     const mediaQuery = window.matchMedia(query);
-    mediaQuery.addEventListener("change", callback);
-    return () => mediaQuery.removeEventListener("change", callback);
+    mediaQuery.addEventListener('change', callback);
+    return () => mediaQuery.removeEventListener('change', callback);
   };
 
   const getSnapshot = () => window.matchMedia(query).matches;
@@ -25,9 +25,8 @@ export function useMediaQuery(query) {
 }
 
 // Preset breakpoint hooks
-export const useIsMobile = () => useMediaQuery("(max-width: 640px)");
-export const useIsTablet = () =>
-  useMediaQuery("(min-width: 641px) and (max-width: 1024px)");
-export const useIsDesktop = () => useMediaQuery("(min-width: 1025px)");
+export const useIsMobile = () => useMediaQuery('(max-width: 640px)');
+export const useIsTablet = () => useMediaQuery('(min-width: 641px) and (max-width: 1024px)');
+export const useIsDesktop = () => useMediaQuery('(min-width: 1025px)');
 
 export default useMediaQuery;

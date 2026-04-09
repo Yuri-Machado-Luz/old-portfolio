@@ -1,7 +1,7 @@
-import { AnimatedBackground } from "@components";
-import { About, Contact, Footer, Hero, Navbar, Projects } from "@layout";
-import "@styles/index.css";
-import Warning from "@components/warning";
+import { AnimatedBackground } from '@components';
+import { About, Contact, Footer, Hero, Navbar, Projects } from '@layout';
+import '@styles/index.css';
+import Warning from '@components/warning';
 
 function App() {
   return (

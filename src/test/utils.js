@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render } from '@testing-library/react';
 
 /**
  * Custom render function with common providers
@@ -31,12 +31,12 @@ export async function waitForCondition(condition, timeout = 5000) {
 
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error("Timeout waiting for condition");
+      throw new Error('Timeout waiting for condition');
     }
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
 }
 
 // Re-export everything from testing-library
-export * from "@testing-library/react";
-export { default as userEvent } from "@testing-library/user-event";
+export * from '@testing-library/react';
+export { default as userEvent } from '@testing-library/user-event';

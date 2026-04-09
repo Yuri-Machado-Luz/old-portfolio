@@ -1,7 +1,7 @@
-import { Container, Section } from "@components/layout";
-import { Badge, Button } from "@components/ui";
-import { AnimatePresence, motion as Motion } from "motion/react";
-import { badgeVariants, titleVariants } from "./const.env.js";
+import { Container, Section } from '@components/layout';
+import { Badge, Button } from '@components/ui';
+import { AnimatePresence, motion as Motion } from 'motion/react';
+import { badgeVariants, titleVariants } from './const.env.js';
 
 function Hero() {
   const descriptionVariants = {
@@ -25,7 +25,7 @@ function Hero() {
       transition: {
         delay: 1.2,
         duration: 0.5,
-        ease: "backOut",
+        ease: 'backOut',
       },
     },
   };

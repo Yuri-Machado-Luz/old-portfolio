@@ -1,15 +1,15 @@
-import { AnimatedSection, FadeIn } from "@components/animation";
-import { Container, Section } from "@components/layout";
-import { Button, Card, Icon } from "@components/ui";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import { AnimatedSection, FadeIn } from '@components/animation';
+import { Container, Section } from '@components/layout';
+import { Button, Card, Icon } from '@components/ui';
+import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [formStatus, setFormStatus] = useState({
     submitting: false,
@@ -29,11 +29,11 @@ const Contact = () => {
     setFormStatus({ submitting: true, submitted: false, error: null });
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
@@ -48,52 +48,52 @@ const Contact = () => {
 
       if (result.success) {
         setFormStatus({ submitting: false, submitted: true, error: null });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: '', email: '', subject: '', message: '' });
 
         // Limpar mensagem de sucesso após 5 segundos
         setTimeout(() => {
           setFormStatus({ submitting: false, submitted: false, error: null });
         }, 5000);
       } else {
-        throw new Error("Erro ao enviar mensagem");
+        throw new Error('Erro ao enviar mensagem');
       }
     } catch {
       setFormStatus({
         submitting: false,
         submitted: false,
-        error: "Erro ao enviar mensagem. Tente novamente.",
+        error: 'Erro ao enviar mensagem. Tente novamente.',
       });
     }
   };
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "yurimachadoluz@hotmail.com",
-      href: "mailto:yurimachadoluz@hotmail.com",
+      label: 'Email',
+      value: 'yurimachadoluz@hotmail.com',
+      href: 'mailto:yurimachadoluz@hotmail.com',
     },
     {
       icon: Phone,
-      label: "Telefone",
-      value: "+55 (11) 9 4935-9394",
-      href: "https://wa.me/5511949359394",
+      label: 'Telefone',
+      value: '+55 (11) 9 4935-9394',
+      href: 'https://wa.me/5511949359394',
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/yurimachadoluz0311",
-      href: "https://linkedin.com/in/yurimachadoluz0311",
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/yurimachadoluz0311',
+      href: 'https://linkedin.com/in/yurimachadoluz0311',
     },
     {
       icon: Github,
-      label: "GitHub",
-      value: "github.com/Yuri-Machado-Luz",
-      href: "https://github.com/Yuri-Machado-Luz",
+      label: 'GitHub',
+      value: 'github.com/Yuri-Machado-Luz',
+      href: 'https://github.com/Yuri-Machado-Luz',
     },
     {
       icon: MapPin,
-      label: "Localização",
-      value: "São Paulo, Brasil",
+      label: 'Localização',
+      value: 'São Paulo, Brasil',
       href: null,
     },
   ];
@@ -106,8 +106,8 @@ const Contact = () => {
             CONTATO<span className="text-sec">.</span>
           </h2>
           <p className="text-main-white/70 mb-12 max-w-2xl">
-            Desenvolvimento full-stack, automação de processos ou consultoria
-            técnica. Entre em contato para discutir seu projeto.
+            Desenvolvimento full-stack, automação de processos ou consultoria técnica. Entre em
+            contato para discutir seu projeto.
           </p>
         </AnimatedSection>
 
@@ -120,8 +120,8 @@ const Contact = () => {
                   Informações de Contato
                 </h3>
                 <p className="text-main-white/70 text-sm leading-relaxed">
-                  Disponível para projetos freelance, contrato CLT/PJ ou
-                  consultoria técnica. Resposta em até 24 horas.
+                  Disponível para projetos freelance, contrato CLT/PJ ou consultoria técnica.
+                  Resposta em até 24 horas.
                 </p>
 
                 <div className="mt-4 flex flex-col gap-4">
@@ -151,9 +151,7 @@ const Contact = () => {
                             {item.value}
                           </a>
                         ) : (
-                          <span className="text-main-white text-sm">
-                            {item.value}
-                          </span>
+                          <span className="text-main-white text-sm">{item.value}</span>
                         )}
                       </div>
                     </div>
@@ -170,10 +168,7 @@ const Contact = () => {
                 <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <label
-                        htmlFor="name"
-                        className="text-main-white/80 mb-2 block text-sm"
-                      >
+                      <label htmlFor="name" className="text-main-white/80 mb-2 block text-sm">
                         Nome
                       </label>
                       <input
@@ -190,10 +185,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="email"
-                        className="text-main-white/80 mb-2 block text-sm"
-                      >
+                      <label htmlFor="email" className="text-main-white/80 mb-2 block text-sm">
                         Email
                       </label>
                       <input
@@ -212,10 +204,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="subject"
-                      className="text-main-white/80 mb-2 block text-sm"
-                    >
+                    <label htmlFor="subject" className="text-main-white/80 mb-2 block text-sm">
                       Assunto
                     </label>
                     <select
@@ -232,28 +221,16 @@ const Contact = () => {
                       <option value="" disabled className="text-main-gray">
                         Selecione um assunto
                       </option>
-                      <option
-                        value="Projeto de Desenvolvimento"
-                        className="text-main-black"
-                      >
+                      <option value="Projeto de Desenvolvimento" className="text-main-black">
                         Projeto de Desenvolvimento
                       </option>
-                      <option
-                        value="Automação / Integração"
-                        className="text-main-black"
-                      >
+                      <option value="Automação / Integração" className="text-main-black">
                         Automação / Integração
                       </option>
-                      <option
-                        value="Consultoria Técnica"
-                        className="text-main-black"
-                      >
+                      <option value="Consultoria Técnica" className="text-main-black">
                         Consultoria Técnica
                       </option>
-                      <option
-                        value="Oportunidade de Trabalho"
-                        className="text-main-black"
-                      >
+                      <option value="Oportunidade de Trabalho" className="text-main-black">
                         Oportunidade de Trabalho
                       </option>
                       <option value="Outro" className="text-main-black">
@@ -263,10 +240,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="text-main-white/80 mb-2 block text-sm"
-                    >
+                    <label htmlFor="message" className="text-main-white/80 mb-2 block text-sm">
                       Mensagem
                     </label>
                     <textarea
@@ -302,7 +276,7 @@ const Contact = () => {
                     className="mt-2"
                     disabled={formStatus.submitting}
                   >
-                    {formStatus.submitting ? "Enviando..." : "Enviar Mensagem"}
+                    {formStatus.submitting ? 'Enviando...' : 'Enviar Mensagem'}
                   </Button>
 
                   <p className="text-main-white/40 mt-2 text-center text-xs">

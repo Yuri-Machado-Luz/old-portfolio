@@ -7,7 +7,7 @@ export default function Warning() {
       <p className="font-bold">Aviso</p>
       <p>Site depreciado, versão expositiva.</p>
       <p>
-        Visite meu site principal{" "}
+        Visite meu site principal{' '}
         <a
           href="https://yurimachado.dev.br"
           target="_blank"

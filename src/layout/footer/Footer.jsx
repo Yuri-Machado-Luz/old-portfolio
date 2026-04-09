@@ -1,8 +1,8 @@
-import { AnimatedSection, FadeIn } from "@components/animation";
-import { Container, Section } from "@components/layout";
-import { Badge, Button, Icon } from "@components/ui";
-import { NAV_ITEMS } from "@constants/routes";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { AnimatedSection, FadeIn } from '@components/animation';
+import { Container, Section } from '@components/layout';
+import { Badge, Button, Icon } from '@components/ui';
+import { NAV_ITEMS } from '@constants/routes';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,49 +10,37 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/Yuri-Machado-Luz",
-      label: "GitHub",
+      href: 'https://github.com/Yuri-Machado-Luz',
+      label: 'GitHub',
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yurimachadoluz0311",
-      label: "LinkedIn",
+      href: 'https://linkedin.com/in/yurimachadoluz0311',
+      label: 'LinkedIn',
     },
     {
       icon: Phone,
-      href: "https://wa.me/5511949359394",
-      label: "WhatsApp",
+      href: 'https://wa.me/5511949359394',
+      label: 'WhatsApp',
     },
     {
       icon: Mail,
-      href: "mailto:yurimachadoluz@hotmail.com",
-      label: "Email",
+      href: 'mailto:yurimachadoluz@hotmail.com',
+      label: 'Email',
     },
   ];
 
-  const techStack = [
-    "React",
-    "Node.js",
-    "Python",
-    "TypeScript",
-    "Tailwind CSS",
-    "PostgreSQL",
-  ];
+  const techStack = ['React', 'Node.js', 'Python', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'];
 
   const services = [
-    "Desenvolvimento Full-Stack",
-    "Automação de Processos",
-    "Integração de APIs",
-    "Data Pipeline & ETL",
+    'Desenvolvimento Full-Stack',
+    'Automação de Processos',
+    'Integração de APIs',
+    'Data Pipeline & ETL',
   ];
 
   return (
-    <Section
-      id="footer"
-      as="footer"
-      spacing="lg"
-      className="border-main-gray/30 border-t"
-    >
+    <Section id="footer" as="footer" spacing="lg" className="border-main-gray/30 border-t">
       <Container size="2xl">
         <AnimatedSection animation="fadeUp">
           <div
@@ -66,9 +54,8 @@ const Footer = () => {
                   YUMA<span className="text-pri">.</span>
                 </h3>
                 <p className="text-main-white/70 text-sm leading-relaxed">
-                  Desenvolvedor full-stack com visão end-to-end. Combinando
-                  expertise técnica com background em Psicologia e Design para
-                  criar soluções que fazem sentido.
+                  Desenvolvedor full-stack com visão end-to-end. Combinando expertise técnica com
+                  background em Psicologia e Design para criar soluções que fazem sentido.
                 </p>
                 <div className="flex gap-3">
                   {socialLinks.map((social, index) => (
@@ -93,9 +80,7 @@ const Footer = () => {
             <FadeIn delay={0.2} direction="up">
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex flex-col gap-4">
-                  <h4 className="text-main-white text-lg font-semibold">
-                    Navegação
-                  </h4>
+                  <h4 className="text-main-white text-lg font-semibold">Navegação</h4>
                   <nav className="flex flex-col gap-2">
                     {NAV_ITEMS.map((item, index) => (
                       <Button
@@ -113,9 +98,7 @@ const Footer = () => {
                   </nav>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h4 className="text-main-white text-lg font-semibold">
-                    Serviços
-                  </h4>
+                  <h4 className="text-main-white text-lg font-semibold">Serviços</h4>
                   <ul className="flex flex-col gap-2">
                     {services.map((service, index) => (
                       <li
@@ -134,9 +117,7 @@ const Footer = () => {
             {/* Coluna 3: Tech Stack + CTA */}
             <FadeIn delay={0.3} direction="up">
               <div className="flex flex-col gap-4">
-                <h4 className="text-main-white text-lg font-semibold">
-                  Tecnologias
-                </h4>
+                <h4 className="text-main-white text-lg font-semibold">Tecnologias</h4>
                 <div className="flex flex-wrap gap-2">
                   {techStack.map((tech, index) => (
                     <Badge key={index} variant="outline" size="sm">
@@ -172,9 +153,8 @@ const Footer = () => {
                 © {currentYear} Yuri Machado Luz. Todos os direitos reservados.
               </p>
               <p className="text-main-white/50 text-center text-sm sm:text-right">
-                Desenvolvido com{" "}
-                <span className="text-pri inline-block animate-pulse">♥</span>{" "}
-                em São Paulo, Brasil
+                Desenvolvido com <span className="text-pri inline-block animate-pulse">♥</span> em
+                São Paulo, Brasil
               </p>
             </div>
           </FadeIn>

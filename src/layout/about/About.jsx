@@ -1,14 +1,10 @@
-import { AnimatedSection, FadeIn } from "@components/animation";
-import { Container, Section } from "@components/layout";
-import { Badge, Card } from "@components/ui";
-import { AnimatePresence, motion as Motion } from "motion/react";
-import { Briefcase, Code, GraduationCap, User } from "lucide-react";
-import { useState } from "react";
-import {
-  EDUCATION,
-  EXPERIENCES,
-  SKILL_CATEGORIES,
-} from "../skills/const.env.js";
+import { AnimatedSection, FadeIn } from '@components/animation';
+import { Container, Section } from '@components/layout';
+import { Badge, Card } from '@components/ui';
+import { AnimatePresence, motion as Motion } from 'motion/react';
+import { Briefcase, Code, GraduationCap, User } from 'lucide-react';
+import { useState } from 'react';
+import { EDUCATION, EXPERIENCES, SKILL_CATEGORIES } from '../skills/const.env.js';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,22 +12,22 @@ const About = () => {
   const tabs = [
     {
       id: 0,
-      label: "Perfil",
+      label: 'Perfil',
       icon: User,
     },
     {
       id: 1,
-      label: "Competências",
+      label: 'Competências',
       icon: Code,
     },
     {
       id: 2,
-      label: "Experiência",
+      label: 'Experiência',
       icon: Briefcase,
     },
     {
       id: 3,
-      label: "Formação",
+      label: 'Formação',
       icon: GraduationCap,
     },
   ];
@@ -57,7 +53,7 @@ const About = () => {
                   className={`relative flex items-center gap-2 rounded-lg px-6
                   py-3 font-medium transition-all duration-300 ${
                     activeTab === tab.id
-                      ? "bg-pri/20 text-pri border-pri/50 border-2"
+                      ? 'bg-pri/20 text-pri border-pri/50 border-2'
                       : `bg-main-gray/30 text-main-white/60 border-main-gray/30
                         hover:text-main-white hover:border-main-gray/50
                         border-2`
@@ -92,16 +88,13 @@ const About = () => {
                       className="text-main-white/80 text-justify text-lg
                         leading-relaxed"
                     >
-                      Desenvolvedor full-stack em formação, cursando Análise e
-                      Desenvolvimento de Sistemas. Atuo no desenvolvimento de
-                      soluções completas, desde a interface do usuário até a
-                      lógica e infraestrutura de back-end. Tenho experiência
-                      prática na aplicação de boas práticas de engenharia de
-                      software, como código limpo, testes automatizados e
-                      versionamento, e trabalho com metodologias ágeis
-                      (Scrum/Kanban). Busco constantemente integrar
-                      conhecimentos em arquitetura escalável, modelagem de
-                      processos (BPMN) e pipelines de CI/CD para garantir a
+                      Desenvolvedor full-stack em formação, cursando Análise e Desenvolvimento de
+                      Sistemas. Atuo no desenvolvimento de soluções completas, desde a interface do
+                      usuário até a lógica e infraestrutura de back-end. Tenho experiência prática
+                      na aplicação de boas práticas de engenharia de software, como código limpo,
+                      testes automatizados e versionamento, e trabalho com metodologias ágeis
+                      (Scrum/Kanban). Busco constantemente integrar conhecimentos em arquitetura
+                      escalável, modelagem de processos (BPMN) e pipelines de CI/CD para garantir a
                       qualidade e a eficiência dos projetos.
                     </p>
                   </div>
@@ -114,12 +107,10 @@ const About = () => {
                       className="text-main-white/70 text-justify text-lg
                         leading-relaxed"
                     >
-                      Formação multidisciplinar combinando Análise e
-                      Desenvolvimento de Sistemas (em andamento) com quatro anos
-                      de Psicologia. Esta intersecção permite desenvolver
-                      soluções tecnicamente robustas e centradas na experiência
-                      do usuário, integrando aspectos funcionais e
-                      comportamentais do design de interfaces.
+                      Formação multidisciplinar combinando Análise e Desenvolvimento de Sistemas (em
+                      andamento) com quatro anos de Psicologia. Esta intersecção permite desenvolver
+                      soluções tecnicamente robustas e centradas na experiência do usuário,
+                      integrando aspectos funcionais e comportamentais do design de interfaces.
                     </p>
                   </div>
                 </div>
@@ -133,20 +124,16 @@ const About = () => {
                   <FadeIn key={catIndex} delay={0.1 + catIndex * 0.1}>
                     <Card variant="glass" className="h-full p-6">
                       <Card.Header className="mb-4">
-                        <h4 className="text-main-white text-lg font-semibold">
-                          {category.title}
-                        </h4>
+                        <h4 className="text-main-white text-lg font-semibold">{category.title}</h4>
                       </Card.Header>
                       <Card.Body>
                         <div className="flex flex-wrap gap-2">
                           {category.skills.map((skill, skillIndex) => (
                             <Badge
                               key={skillIndex}
-                              variant={
-                                skill.primary ? "primaryOutline" : "outline"
-                              }
-                              size={skill.primary ? "lg" : "md"}
-                              className={`${skill.primary ? "opacity-100" : "opacity-60"}`}
+                              variant={skill.primary ? 'primaryOutline' : 'outline'}
+                              size={skill.primary ? 'lg' : 'md'}
+                              className={`${skill.primary ? 'opacity-100' : 'opacity-60'}`}
                             >
                               {skill.name}
                             </Badge>
@@ -167,12 +154,8 @@ const About = () => {
                     <Card variant="glass" hover className="p-6">
                       <div className="flex flex-col gap-4 md:flex-row">
                         <div className="shrink-0 md:w-48">
-                          <p className="text-sec text-sm font-semibold">
-                            {exp.period}
-                          </p>
-                          <p className="text-main-white/50 mt-1 text-xs">
-                            {exp.type}
-                          </p>
+                          <p className="text-sec text-sm font-semibold">{exp.period}</p>
+                          <p className="text-main-white/50 mt-1 text-xs">{exp.type}</p>
                         </div>
 
                         <div className="flex-1">
@@ -182,9 +165,7 @@ const About = () => {
                           >
                             {exp.role}
                           </h4>
-                          <p className="text-main-white/70 mb-3 text-sm">
-                            {exp.company}
-                          </p>
+                          <p className="text-main-white/70 mb-3 text-sm">{exp.company}</p>
                           <p
                             className="text-main-white/60 mb-4 text-sm
                               leading-relaxed"
@@ -241,23 +222,15 @@ const About = () => {
                         >
                           {edu.degree}
                         </h4>
-                        <p className="text-main-white/70 mb-2 text-sm">
-                          {edu.institution}
-                        </p>
+                        <p className="text-main-white/70 mb-2 text-sm">{edu.institution}</p>
                         <div className="flex items-center justify-between">
                           <Badge
-                            variant={
-                              edu.status.includes("andamento")
-                                ? "primary"
-                                : "outline"
-                            }
+                            variant={edu.status.includes('andamento') ? 'primary' : 'outline'}
                             size="xs"
                           >
                             {edu.status}
                           </Badge>
-                          <span className="text-main-white/50 text-xs">
-                            {edu.period}
-                          </span>
+                          <span className="text-main-white/50 text-xs">{edu.period}</span>
                         </div>
                       </Card.Body>
                     </Card>

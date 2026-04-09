@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 /**
  * AnimatedBackground
@@ -13,7 +13,7 @@ const AnimatedBackground = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     let animationId;
     let particles = [];
     let gradientAngle = 0;
@@ -36,7 +36,7 @@ const AnimatedBackground = () => {
           speedX: (Math.random() - 0.5) * 0.3,
           speedY: (Math.random() - 0.5) * 0.3,
           opacity: Math.random() * 0.5 + 0.1,
-          color: Math.random() > 0.5 ? "rgba(255, 0, 64," : "rgba(0, 255, 255,",
+          color: Math.random() > 0.5 ? 'rgba(255, 0, 64,' : 'rgba(0, 255, 255,',
         });
       }
     };
@@ -56,8 +56,8 @@ const AnimatedBackground = () => {
         centerY,
         Math.max(canvas.width, canvas.height),
       );
-      baseGradient.addColorStop(0, "rgba(12, 9, 13, 1)");
-      baseGradient.addColorStop(1, "rgba(12, 9, 13, 1)");
+      baseGradient.addColorStop(0, 'rgba(12, 9, 13, 1)');
+      baseGradient.addColorStop(1, 'rgba(12, 9, 13, 1)');
 
       ctx.fillStyle = baseGradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -65,17 +65,10 @@ const AnimatedBackground = () => {
       // Blob animado 1 (vermelho/rosa)
       const blob1X = centerX + Math.sin(gradientAngle) * 300;
       const blob1Y = centerY + Math.cos(gradientAngle * 0.7) * 200;
-      const blob1Gradient = ctx.createRadialGradient(
-        blob1X,
-        blob1Y,
-        0,
-        blob1X,
-        blob1Y,
-        400,
-      );
-      blob1Gradient.addColorStop(0, "rgba(255, 0, 64, 0.15)");
-      blob1Gradient.addColorStop(0.5, "rgba(255, 0, 64, 0.05)");
-      blob1Gradient.addColorStop(1, "rgba(255, 0, 64, 0)");
+      const blob1Gradient = ctx.createRadialGradient(blob1X, blob1Y, 0, blob1X, blob1Y, 400);
+      blob1Gradient.addColorStop(0, 'rgba(255, 0, 64, 0.15)');
+      blob1Gradient.addColorStop(0.5, 'rgba(255, 0, 64, 0.05)');
+      blob1Gradient.addColorStop(1, 'rgba(255, 0, 64, 0)');
 
       ctx.fillStyle = blob1Gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -83,17 +76,10 @@ const AnimatedBackground = () => {
       // Blob animado 2 (ciano)
       const blob2X = centerX + Math.cos(gradientAngle * 0.8) * 350;
       const blob2Y = centerY + Math.sin(gradientAngle * 1.2) * 250;
-      const blob2Gradient = ctx.createRadialGradient(
-        blob2X,
-        blob2Y,
-        0,
-        blob2X,
-        blob2Y,
-        350,
-      );
-      blob2Gradient.addColorStop(0, "rgba(0, 255, 255, 0.12)");
-      blob2Gradient.addColorStop(0.5, "rgba(0, 255, 255, 0.04)");
-      blob2Gradient.addColorStop(1, "rgba(0, 255, 255, 0)");
+      const blob2Gradient = ctx.createRadialGradient(blob2X, blob2Y, 0, blob2X, blob2Y, 350);
+      blob2Gradient.addColorStop(0, 'rgba(0, 255, 255, 0.12)');
+      blob2Gradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.04)');
+      blob2Gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
 
       ctx.fillStyle = blob2Gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -101,17 +87,10 @@ const AnimatedBackground = () => {
       // Blob animado 3 (vermelho escuro, canto inferior)
       const blob3X = canvas.width * 0.8 + Math.sin(gradientAngle * 0.5) * 100;
       const blob3Y = canvas.height * 0.7 + Math.cos(gradientAngle * 0.6) * 150;
-      const blob3Gradient = ctx.createRadialGradient(
-        blob3X,
-        blob3Y,
-        0,
-        blob3X,
-        blob3Y,
-        500,
-      );
-      blob3Gradient.addColorStop(0, "rgba(204, 0, 51, 0.1)");
-      blob3Gradient.addColorStop(0.6, "rgba(204, 0, 51, 0.03)");
-      blob3Gradient.addColorStop(1, "rgba(204, 0, 51, 0)");
+      const blob3Gradient = ctx.createRadialGradient(blob3X, blob3Y, 0, blob3X, blob3Y, 500);
+      blob3Gradient.addColorStop(0, 'rgba(204, 0, 51, 0.1)');
+      blob3Gradient.addColorStop(0.6, 'rgba(204, 0, 51, 0.03)');
+      blob3Gradient.addColorStop(1, 'rgba(204, 0, 51, 0)');
 
       ctx.fillStyle = blob3Gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -167,11 +146,11 @@ const AnimatedBackground = () => {
     };
 
     resize();
-    window.addEventListener("resize", resize);
+    window.addEventListener('resize', resize);
     animate();
 
     return () => {
-      window.removeEventListener("resize", resize);
+      window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationId);
     };
   }, []);
@@ -180,7 +159,7 @@ const AnimatedBackground = () => {
     <canvas
       ref={canvasRef}
       className="pointer-events-none fixed inset-0 -z-10"
-      style={{ background: "#0c090d" }}
+      style={{ background: '#0c090d' }}
     />
   );
 };

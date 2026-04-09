@@ -12,11 +12,11 @@
  * @param {string} locale - Locale string (default: 'pt-BR')
  * @returns {string} Formatted date string
  */
-export function formatDate(date, options = {}, locale = "pt-BR") {
+export function formatDate(date, options = {}, locale = 'pt-BR') {
   const defaultOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
     ...options,
   };
 
@@ -30,22 +30,22 @@ export function formatDate(date, options = {}, locale = "pt-BR") {
  * @param {string} locale - Locale string (default: 'pt-BR')
  * @returns {string} Relative time string
  */
-export function formatRelativeTime(date, locale = "pt-BR") {
+export function formatRelativeTime(date, locale = 'pt-BR') {
   const now = new Date();
   const then = new Date(date);
   const diffInSeconds = Math.floor((now - then) / 1000);
 
   const intervals = [
-    { label: "year", seconds: 31536000 },
-    { label: "month", seconds: 2592000 },
-    { label: "week", seconds: 604800 },
-    { label: "day", seconds: 86400 },
-    { label: "hour", seconds: 3600 },
-    { label: "minute", seconds: 60 },
-    { label: "second", seconds: 1 },
+    { label: 'year', seconds: 31536000 },
+    { label: 'month', seconds: 2592000 },
+    { label: 'week', seconds: 604800 },
+    { label: 'day', seconds: 86400 },
+    { label: 'hour', seconds: 3600 },
+    { label: 'minute', seconds: 60 },
+    { label: 'second', seconds: 1 },
   ];
 
-  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' });
 
   for (const interval of intervals) {
     const count = Math.floor(diffInSeconds / interval.seconds);
@@ -54,5 +54,5 @@ export function formatRelativeTime(date, locale = "pt-BR") {
     }
   }
 
-  return rtf.format(0, "second");
+  return rtf.format(0, 'second');
 }

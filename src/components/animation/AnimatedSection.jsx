@@ -1,5 +1,5 @@
-import { cn } from "@utils/cn";
-import { motion as Motion } from "motion/react";
+import { cn } from '@utils/cn';
+import { motion as Motion } from 'motion/react';
 
 /**
  * AnimatedSection Component
@@ -13,7 +13,7 @@ import { motion as Motion } from "motion/react";
  */
 const AnimatedSection = ({
   children,
-  animation = "fadeUp",
+  animation = 'fadeUp',
   delay = 0,
   duration = 0.6,
   className,
@@ -41,8 +41,8 @@ const AnimatedSection = ({
       visible: { opacity: 1, scale: 1 },
     },
     blur: {
-      hidden: { opacity: 0, filter: "blur(10px)" },
-      visible: { opacity: 1, filter: "blur(0px)" },
+      hidden: { opacity: 0, filter: 'blur(10px)' },
+      visible: { opacity: 1, filter: 'blur(0px)' },
     },
   };
 
@@ -50,7 +50,7 @@ const AnimatedSection = ({
     <Motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: '-100px' }}
       variants={animations[animation]}
       transition={{
         duration,
