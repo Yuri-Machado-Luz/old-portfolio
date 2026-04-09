@@ -32,8 +32,10 @@ Site de portfolio pessoal desenvolvido com React e tecnologias web modernas.
 
 ### DEPRECATED
 
-> [!WARNING] Arquivado
-> Projeto arquivado para desenvolvimento de uma nova versão.
+> [!WARNING]
+> **Arquivado**
+> 
+> _Projeto arquivado para desenvolvimento de uma nova versão._
 
 ---
 
